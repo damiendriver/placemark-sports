@@ -1,0 +1,22 @@
+{
+  "clubs": [
+    {
+      "clubname": "test2",
+      "description": "test3",
+      "county": "test4",
+      "latitude": "12.12",
+      "longitude": "77.77",
+      "_id": "41317f26-24e7-449e-92a5-d268fc291704",
+      "sportgroundid": "33933f87-b519-4fff-88fd-5078a36eace1"
+    },
+    {
+      "clubname": "rosslare",
+      "description": "rosslare",
+      "county": "Wexford",
+      "latitude": 19,
+      "longitude": 16.52,
+      "_id": "03d0f3a3-6df0-40d3-919d-0a2927109a33",
+      "sportgroundid": "33933f87-b519-4fff-88fd-5078a36eace1"
+    }
+  ]
+}
