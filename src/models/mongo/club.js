@@ -7,7 +7,7 @@ const clubSchema = new Schema({
   description: String,
   county: String,
   latitude: Number,
-  lonitude: Number,
+  longitude: Number,
   sportgroundid: {
     type: Schema.Types.ObjectId,
     ref: "Sportground",
