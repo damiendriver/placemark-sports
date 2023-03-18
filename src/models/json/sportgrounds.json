@@ -1,16 +1,3 @@
 {
-  "sportgrounds": [
-    {
-      "title": "Soccer",
-      "_id": "dcc68066-5176-443a-88f6-570d34455ed0"
-    },
-    {
-      "title": "GAA",
-      "_id": "6383c398-da20-48c3-a9b7-0d468bc08699"
-    },
-    {
-      "title": "Rugby",
-      "_id": "bfbc3397-7836-4900-a6ec-5383d86042a3"
-    }
-  ]
+  "sportgrounds": []
 }
