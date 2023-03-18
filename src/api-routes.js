@@ -20,4 +20,7 @@ export const apiRoutes = [
   { method: "DELETE", path: "/api/clubs", config: clubApi.deleteAll },
   { method: "DELETE", path: "/api/clubs/{id}", config: clubApi.deleteOne },
 
+  { method: "POST", path: "/api/users/authenticate", config: userApi.authenticate },
+
+
 ];

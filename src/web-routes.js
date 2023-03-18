@@ -2,6 +2,7 @@ import { accountsController } from "./controllers/accounts-controller.js";
 import { dashboardController } from "./controllers/dashboard-controller.js";
 import { aboutController } from "./controllers/about-controller.js";
 import { sportgroundController } from "./controllers/sportground-controller.js";
+import { clubController } from "./controllers/club-controller.js";
 
 export const webRoutes = [
   { method: "GET", path: "/", config: accountsController.index },
@@ -21,6 +22,12 @@ export const webRoutes = [
 
   { method: "GET", path: "/dashboard/deletesportground/{id}", config: dashboardController.deleteSportground },
   { method: "GET", path: "/sportground/{id}/deleteclub/{clubid}", config: sportgroundController.deleteClub },
+
+  { method: "GET", path: "/club/{id}/editclub/{clubid}", config: clubController.index },
+  { method: "POST", path: "/club/{id}/updateclub/{clubid}", config: clubController.update },
+
+  { method: "GET", path: "/{param*}", handler: { directory: { path: "./public" } }, options: { auth: false } }
+
 
 ];
 

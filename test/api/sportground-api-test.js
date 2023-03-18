@@ -11,9 +11,13 @@ suite("Sportground API tests", () => {
     let user = null;
   
     setup(async () => {
+      placemarkService.clearAuth();
+      user = await placemarkService.createUser(maggie);
+      await placemarkService.authenticate(maggie);
       await placemarkService.deleteAllSportgrounds();
       await placemarkService.deleteAllUsers();
       user = await placemarkService.createUser(maggie);
+      await placemarkService.authenticate(maggie);
       soccer.userid = user._id;
     });
 
