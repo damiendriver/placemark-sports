@@ -25,17 +25,25 @@ if (result.error) {
 const swaggerOptions = {
   info: {
     title: "Placemark API",
-    version: "0.1",
+    version: "0.1"
   },
+  securityDefinitions: {
+    jwt: {
+      type: "apiKey",
+      name: "Authorization",
+      in: "header"
+    }
+  },
+  security: [{ jwt: [] }]
 };
+
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 async function init() {
   const server = Hapi.server({
-    port: 3000,
-    host: "localhost",
+    port: process.env.PORT || 3000,
   });
 
   await server.register(Vision);

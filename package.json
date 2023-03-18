@@ -12,6 +12,11 @@
     "testmodels": "./node_modules/mocha/bin/mocha --ui tdd test/models/**/*.js",
     "testapi": "./node_modules/mocha/bin/mocha --ui tdd test/api/**/*.js"
   },
+
+  "engines": {
+    "node": ">=18.0.0"
+  },
+
   "author": "",
   "license": "ISC",
   "devDependencies": {
@@ -37,6 +42,7 @@
     "joi": "^17.8.4",
     "jsonwebtoken": "^9.0.0",
     "lowdb": "^5.1.0",
+    "mais-mongoose-seeder": "^1.0.7",
     "mongoose": "^7.0.2",
     "uuid": "^9.0.0"
   }

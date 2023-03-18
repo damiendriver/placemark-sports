@@ -1,7 +1,7 @@
 import { assert } from "chai";
 import { assertSubset } from "../test-utils.js";
 import { placemarkService } from "./placemark-service.js";
-import { maggie, soccer, testSportgrounds, testClubs, rosslare } from "../fixtures.js";
+import { maggie, soccer, testSportgrounds, testClubs, rosslare, maggieCredentials } from "../fixtures.js";
 
 suite("Club API tests", () => {
   let user = null;
@@ -10,12 +10,12 @@ suite("Club API tests", () => {
   setup(async () => {
     placemarkService.clearAuth();
     user = await placemarkService.createUser(maggie);
-    await placemarkService.authenticate(maggie);
+    await placemarkService.authenticate(maggieCredentials);
     await placemarkService.deleteAllSportgrounds();
     await placemarkService.deleteAllUsers();
     await placemarkService.deleteAllClubs();
     user = await placemarkService.createUser(maggie);
-    await placemarkService.authenticate(maggie);
+    await placemarkService.authenticate(maggieCredentials);
     soccer.userid = user._id;
     rugby = await placemarkService.createSportground(soccer);
   });

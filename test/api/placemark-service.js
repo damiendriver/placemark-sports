@@ -1,6 +1,6 @@
 import axios from "axios";
 
-import { serviceUrl, maggie } from "../fixtures.js";
+import { serviceUrl, maggie, maggieCredentials } from "../fixtures.js";
 
 export const placemarkService = {
   placemarkUrl: serviceUrl,
