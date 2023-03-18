@@ -39,5 +39,13 @@ export const sportgroundMongoStore = {
 
   async deleteAllSportgrounds() {
     await Sportground.deleteMany({});
-  }
+  },
+
+  async updateSportground(updatedSportground) {
+    const sportground = await Sportground.findOne({ _id: updatedSportground._id });
+    sportground.title = updatedSportground.title;
+    sportground.img = updatedSportground.img;
+    await sportground.save();
+  },
+
 };

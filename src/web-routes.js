@@ -26,8 +26,9 @@ export const webRoutes = [
   { method: "GET", path: "/club/{id}/editclub/{clubid}", config: clubController.index },
   { method: "POST", path: "/club/{id}/updateclub/{clubid}", config: clubController.update },
 
-  { method: "GET", path: "/{param*}", handler: { directory: { path: "./public" } }, options: { auth: false } }
+  { method: "GET", path: "/{param*}", handler: { directory: { path: "./public" } }, options: { auth: false } },
 
+  { method: "POST", path: "/sportground/{id}/uploadimage", config: sportgroundController.uploadImage },
 
 ];
 

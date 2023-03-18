@@ -1,5 +1,6 @@
 import { db } from "../models/db.js";
 import { ClubSpec } from "../models/joi-schemas.js";
+import { imageStore } from "../models/image-store.js";
 
 export const sportgroundController = {
   index: {
@@ -40,6 +41,30 @@ export const sportgroundController = {
       const sportground = await db.sportgroundStore.getSportgroundById(request.params.id);
       await db.clubStore.deleteClub(request.params.clubid);
       return h.redirect(`/sportground/${sportground._id}`);
+    },
+  },
+
+  uploadImage: {
+    handler: async function (request, h) {
+      try {
+        const sportground = await db.sportgroundStore.getSportgroundById(request.params.id);
+        const file = request.payload.imagefile;
+        if (Object.keys(file).length > 0) {
+          const url = await imageStore.uploadImage(request.payload.imagefile);
+          sportground.img = url;
+          await db.sportgroundStore.updateSportground(sportground);
+        }
+        return h.redirect(`/sportground/${sportground._id}`);
+      } catch (err) {
+        console.log(err);
+        return h.redirect(`/sportground/${sportground._id}`);
+      }
+    },
+    payload: {
+      multipart: true,
+      output: "data",
+      maxBytes: 209715200,
+      parse: true,
     },
   },
 

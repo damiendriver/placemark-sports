@@ -1,9 +1,15 @@
 {{> menu}}
 
-<section class="section">
-  <div class="title">
-    {{sportground.title}}
+<section class="section columns is-vcentered">
+  <div class="column has-text-centered">
+    <div class="title">
+      {{sportground.title}}
+    </div>
+    {{> list-clubs}}
+    {{> add-club}}
   </div>
-  {{> list-clubs}}
-  {{> add-club}}
+  <div class="column">
+    {{> sportground-image }}
+  </div>
 </section>
+
