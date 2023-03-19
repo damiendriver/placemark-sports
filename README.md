@@ -22,4 +22,8 @@ Project Deployed on Glitch and Render.
 <hr>
 ### Github Repository  
 
-https://github.com/damiendriver/placemark-sports.git
+https://github.com/damiendriver/placemark-sports.git  
+
+<hr>
+### Known Errors.  
++ API tests failing after update in fixture.js to render URL - (unable to connect to npm run apitest). 
