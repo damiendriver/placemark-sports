@@ -7,6 +7,7 @@
       <th>Latitude</th>
       <th>Longitude</th>
       <th></th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
@@ -28,6 +29,11 @@
           {{longitude}}
         </td>
         <td>
+          <a href="/club/{{../sportground._id}}/editclub/{{_id}}" class="ui icon button">
+            <i class="fas fa-edit"></i>
+          </a>
+        </td>
+        <td>
           <a href="/sportground/{{../sportground._id}}/deleteclub/{{_id}}" class="ui icon button">
             <i class="fas fa-trash"></i>
           </a>
@@ -36,3 +42,6 @@
     {{/each}}
   </tbody>
 </table>
+<div>
+      {{> map}}
+    </div>

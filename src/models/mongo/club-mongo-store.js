@@ -1,5 +1,4 @@
 import { Club } from "./club.js";
-import { Sportground } from "./sportground.js";
 
 export const clubMongoStore = {
   async getAllClubs() {

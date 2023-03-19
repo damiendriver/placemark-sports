@@ -12,8 +12,8 @@ suite("Club API tests", () => {
     user = await placemarkService.createUser(maggie);
     await placemarkService.authenticate(maggieCredentials);
     await placemarkService.deleteAllSportgrounds();
-    await placemarkService.deleteAllUsers();
     await placemarkService.deleteAllClubs();
+    await placemarkService.deleteAllUsers();
     user = await placemarkService.createUser(maggie);
     await placemarkService.authenticate(maggieCredentials);
     soccer.userid = user._id;

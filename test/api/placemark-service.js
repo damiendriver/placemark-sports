@@ -1,6 +1,6 @@
 import axios from "axios";
 
-import { serviceUrl, maggie, maggieCredentials } from "../fixtures.js";
+import { serviceUrl } from "../fixtures.js";
 
 export const placemarkService = {
   placemarkUrl: serviceUrl,
@@ -48,6 +48,32 @@ export const placemarkService = {
     const res = await axios.get(`${this.placemarkUrl}/api/sportgrounds/${id}`);
     return res.data;
   },
+
+  async getAllClubs() {
+    const res = await axios.get(`${this.placemarkUrl}/api/clubs`);
+    return res.data;
+  },
+
+  async createClub(id, club) {
+    const res = await axios.post(`${this.placemarkUrl}/api/sportgrounds/${id}/clubs`, club);
+    return res.data;
+  },
+
+  async deleteAllClubs() {
+    const res = await axios.delete(`${this.placemarkUrl}/api/clubs`);
+    return res.data;
+  },
+
+  async getClub(id) {
+    const res = await axios.get(`${this.placemarkUrl}/api/clubs/${id}`);
+    return res.data;
+  },
+
+  async deleteClub(id) {
+    const res = await axios.delete(`${this.placemarkUrl}/api/clubs/${id}`);
+    return res.data;
+  },
+
 
   async authenticate(user) {
     const response = await axios.post(`${this.placemarkUrl}/api/users/authenticate`, user);
