@@ -1,12 +1,13 @@
 # placemark-sports
-Placemark - A point of interest app to list Sports Grounds.  
+Placemark - A point of interest app to list Sports Clubs & Grounds.  
 Project Deployed on Glitch and Render.  
 + https://placemark-sportground.glitch.me/
 + https://placemark-sportground.onrender.com/
 
 <hr>
 ## Features  
-+ User Signup & Login
+
++ User Signup and Login
 + Cookie Authentication
 + User can add, edit and remove entries
 + Open API
@@ -20,4 +21,5 @@ Project Deployed on Glitch and Render.
 
 <hr>
 ### Github Repository  
+
 https://github.com/damiendriver/placemark-sports.git
