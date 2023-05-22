@@ -24,18 +24,22 @@ export const seedData = {
       _model: "Sportground",
       soccer: {
         title: "Soccer",
+        //img: "https://res.cloudinary.com/dqu1cfm2e/image/upload/v1679244159/z3kdkwjeizief7kkzqvn.jpg",
         userid: "->users.bart"
       },
       gaa: {
         title: "GAA",
+        //img: "https://res.cloudinary.com/dqu1cfm2e/image/upload/v1679244177/chjny7efs3az4yfqcovb.jpg",
         userid: "->users.bart"
       },
       rugby: {
         title: "Rugby",
+        //img: "https://res.cloudinary.com/dqu1cfm2e/image/upload/v1679244138/xzdfknx8moun7i2fwnvq.jpg",
         userid: "->users.homer"
       },
       golf: {
         title: "Golf",
+        //img: "https://res.cloudinary.com/dqu1cfm2e/image/upload/v1679244117/ukbz9mtr704mopi8p7pv.jpg",
         userid: "->users.homer"
       },
     },
@@ -60,11 +64,11 @@ export const seedData = {
         sportgroundid: "->sportgrounds.gaa"
       },
       club_3 : {
-        clubname: "Wexford Wanders",
-        description: "Leinster Feeder Club",
-        county: "Wexford",
-        latitude: 52.35,
-        longitude: -6.48,
+        clubname: "Waterford Wanders",
+        description: "Munster Feeder Club",
+        county: "Waterford",
+        latitude: 52.25,
+        longitude: -7.11,
         userid: "->users.homer",
         sportgroundid: "->sportgrounds.rugby"
       },
