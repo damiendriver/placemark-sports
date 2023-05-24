@@ -9,8 +9,8 @@
     "lint": "eslint . --ext .js",
     "test": "mocha --ui tdd test/**/*.js -exit",
     "dev": "npx nodemon  src/server.js",
-    "testmodels": "./node_modules/mocha/bin/mocha --ui tdd test/models/**/*.js ",
-    "testapi": "./node_modules/mocha/bin/mocha --ui tdd test/api/**/*.js -exit --timeout 10000"
+    "testmodels": "mocha --ui tdd test/models/**/*.js -exit --timeout 10000",
+    "testapi": "mocha --ui tdd test/api/**/*.js -exit --timeout 10000"
   },
   "engines": {
     "node": ">=18.0.0"
@@ -32,6 +32,7 @@
     "@hapi/hapi": "^21.3.0",
     "@hapi/inert": "^7.1.0",
     "@hapi/vision": "^7.0.1",
+    "bcrypt": "^5.1.0",
     "chai": "^4.3.7",
     "cloudinary": "^1.35.0",
     "dotenv": "^16.0.3",
