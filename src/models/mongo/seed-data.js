@@ -84,6 +84,24 @@ export const seedData = {
         userid: "->users.homer",
         sportgroundid: "->sportgrounds.golf"
       },
+      club_5 : {
+        clubname: "Test Rovers",
+        description: "Test Club",
+        county: "Cork",
+        latitude: 51.89,
+        longitude: -8.42,
+        userid: "->users.homer",
+        sportgroundid: "->sportgrounds.soccer"
+      },
+      club_6 : {
+        clubname: "New Club Celtic",
+        description: "Another Test Club",
+        county: "Carlow",
+        latitude: 52.39,
+        longitude: -6.49,
+        userid: "->users.homer",
+        sportgroundid: "->sportgrounds.soccer"
+      },
     }
   };
   
